@@ -1,211 +1,402 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <me-ta charset="UTF-8">
-  <title>Manikandan AR | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AR Manikandan | Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.16.0/devicon.min.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <nav class="navbar">
-      <h2 class="logo"></h2>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+<!-- ===== NAVBAR ===== -->
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="logo"><span class="logo-accent">AR</span> Manikandan</a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#contact">Contact</a>
     </nav>
-  </header>
 
-<section class="hero">
-    <!-- Floating Circles -->
-    <div class="circle yellow big"></div>
-    <div class="circle blue big-right"></div>
-    <div class="circle orange"></div>
-    <div class="circle yellow small"></div>
-    <div class="circle blue small2"></div>
-    <div class="circle grey"></div>
-
-    <div class="hero-content">
-
-        <div class="hero-image">
-            <img src="manikandan.jpg" alt="Manikandan">
-        </div>
-
-        <div class="hero-text">
-            <h1>Hi, I'm <span>Manikandan AR</span></h1>
-            <h3>Full Stack .NET Developer</h3>
-            <p>I build secure and scalable real-world applications.</p>
-
-            <button class="btn">View Projects</button>
-        </div>
-
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <svg id="themeIcon" width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </div>
+</header>
 
-</section>
-
-<section id="about" class="about-section">
-
-  <div class="about-container">
-
-    <div class="about-image">
-      <img src="img.jpg" alt="About Me">
-    </div>
-
-    <div class="about-content">
-      <h2>About Me</h2>
-      <p>
-        I am a passionate and dedicated Full Stack Developer with a strong interest in building modern and scalable web applications. 
-        My journey in technology is driven by curiosity and continuous learning.
-      </p>
-
-      <p>
-        I enjoy designing user-friendly interfaces and developing efficient back-end systems that solve real-world problems.
-        Writing clean, maintainable code is something I strongly focus on.
-      </p>
-
-      <p>
-        I am always eager to explore new technologies, collaborate in team environments,
-        and contribute to impactful projects that create meaningful digital experiences.
-      </p>
-    </div>
-
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="hero-blobs" aria-hidden="true">
+    <span class="blob blob-red"></span>
+    <span class="blob blob-yellow-sm"></span>
+    <span class="blob blob-orange"></span>
+    <span class="blob blob-blue-lg"></span>
+    <span class="blob blob-yellow"></span>
+    <span class="blob blob-blue-md"></span>
+    <span class="blob blob-red-sm"></span>
+    <span class="blob blob-orange-lg"></span>
   </div>
 
+  <div class="hero-inner">
+    <div class="hero-text">
+      <p class="hello">Hello <span class="wave">👋</span></p>
+      <h1 class="hero-name">I'm <span class="accent">AR</span><br><span class="accent">Manikandan</span></h1>
+      <h2>Aspiring</h2>
+      <h2 class="role-line">
+        <span id="typedRole"></span><span class="cursor">|</span>
+      </h2>
+      <p class="hero-desc">
+        Computer Science Engineering graduate passionate about Full Stack Development,
+        AI/ML, and building scalable, secure software solutions across web, backend and
+        intelligent systems.
+      </p>
+      <div class="hero-cta">
+        <a href="#" class="btn btn-primary" id="downloadResume">Download Resume</a>
+        <a href="#contact" class="btn btn-outline">Hire Me</a>
+      </div>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/manikandan-ar-038843264/"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="LinkedIn"
+             class="social-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.15 1.45-2.15 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 11.02-4.13 2.07 2.07 0 01-.02 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+        </a>
+
+        <a href="https://github.com/manikandanar3646"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="GitHub"
+             class="social-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.88-2.78.62-3.37-1.21-3.37-1.21-.46-1.19-1.11-1.51-1.11-1.51-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.34 1.12 2.91.86.09-.66.35-1.12.64-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.32.1-2.75 0 0 .84-.28 2.75 1.05a9.3 9.3 0 015 0c1.9-1.33 2.74-1.05 2.74-1.05.56 1.43.21 2.49.1 2.75.65.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.48-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0022 12.25C22 6.58 17.52 2 12 2z"/></svg>
+        </a>
+
+        <a href="mailto:manikandanmnm5656@gmail.com"
+             aria-label="Email"
+             class="social-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M2 6.5A2.5 2.5 0 014.5 4h15A2.5 2.5 0 0122 6.5v11a2.5 2.5 0 01-2.5 2.5h-15A2.5 2.5 0 012 17.5v-11zm2.2-.4l7.3 5.47a.8.8 0 00.96 0L19.8 6.1a1 1 0 00-.6-.1H4.8a1 1 0 00-.6.1z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-photo-wrap">
+      <div class="hero-photo-ring">
+        <div class="hero-photo">
+          <img src="manikandan.jpg" alt="AR Manikandan">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true"><span></span></div>
 </section>
-  
- <section id="whatido" class="whatido-section">
-  <h2>What I'm Doing</h2>
 
-  <div class="whatido-grid">
+<!-- ===== ABOUT ME ===== -->
+<section class="about" id="about">
+  <div class="about-text">
+    <h2 class="section-title section-title--left">About Me</h2>
+    <p>
+      I'm a Computer Science Engineering graduate and a passionate Full Stack
+      Developer with a strong interest in building modern, scalable web
+      applications. My journey in technology is driven by curiosity and
+      continuous learning.
+    </p>
+    <p>
+      I enjoy designing user-friendly interfaces and developing efficient
+      backend systems that solve real-world problems — from secure,
+      role-based platforms to AI-powered tools. Writing clean, maintainable
+      code is something I strongly focus on.
+    </p>
+    <p>
+      I'm always eager to explore new technologies, collaborate in team
+      environments, and contribute to impactful projects that create
+      meaningful digital experiences.
+    </p>
+  </div>
 
-    <div class="what-card">
-      <div class="icon">💻</div>
-      <div class="content">
-        <h3>Full Stack Development</h3>
-        <p>
-          Building responsive and scalable web applications using .NET, React, Node.js and SQL Server.
-        </p>
-      </div>
-    </div>
-
-    <div class="what-card">
-      <div class="icon">🖥️</div>
-      <div class="content">
-        <h3>Desktop Application Development</h3>
-        <p>
-          Developing Windows Forms applications for billing systems, management tools and automation software.
-        </p>
-      </div>
-    </div>
-
-    <div class="what-card">
-      <div class="icon">🔐</div>
-      <div class="content">
-        <h3>AI & Security Projects</h3>
-        <p>
-          Exploring AI-powered applications and cybersecurity-focused system development.
-        </p>
-      </div>
-    </div>
-
+  <div class="about-photo">
+    <img src="img.jpg" alt="AR Manikandan">
   </div>
 </section>
 
-  <section id="skills" class="section">
-    <h2>Skills</h2>
-    <div class="skill-grid">
-      <div class="skill">C#</div>
-      <div class="skill">.NET</div>
-      <div class="skill">SQL Server</div>
-      <div class="skill">React</div>
-      <div class="skill">Node.js</div>
-      <div class="skill">java</div>
-      <div class="skill">pandas</div>
-      <div class="skill">SpringBoot</div>    
-      <div class="skill">Visual studio</div>
-      <div class="skill">HTML</div>
-      <div class="skill">CSS</div>
-      <div class="skill">JavaScript</div>
+<!-- ===== WHAT I'M DOING ===== -->
+<section class="doing" id="focus">
+  <h2 class="section-title">What I'm Doing</h2>
+  <div class="doing-grid">
+    <div class="doing-card">
+      <div class="doing-icon">💻</div>
+      <h3>Full Stack Development</h3>
+      <p>Building responsive and scalable web applications using .NET, React, Spring Boot and SQL Server.</p>
     </div>
-  </section>
-
-    <section class="experience" id="experience">
-      <h2 class="section-title">Experience</h2>
-      <div class="timeline">
-        <div class="timeline-line"></div>
-
-           <div class="timeline-item left">
-           <div class="timeline-dot"></div>
-           <div class="timeline-card">
-           <h3>Akhilsoft Solutions</h3>
-           <h4>Full Stack Development Intern</h4>
-           <p>Developed web applications using React.js, C#.NET and SQL Server. Worked in an Agile environment.</p>
-       </div>
-      </div>
-     </section>
-
-    <section class="projects" id="projects"> 
-        <h2 class="section-title">Projects</h2> 
-        <div class="projects-grid"> 
-            <article class="project-card">
-               <div class="project-thumb">
-                   <img src="ai novel.png" alt="AI Novel Generation System">
-              </div>
-
-              <div class="project-body">
-                    <h3>AI Novel Generation System</h3>
-                    <p>XAML · NLP · LiteDB · Llama 3.2 · C#</p>
-              </div>
-            </article>
-
-            <article class="project-card">
-                <div class="project-thumb">
-                    <img src="hotel.png" alt="AI Chatbot System">
-                </div>
-
-                <div class="project-body">
-                    <h3>Hotel Management System</h3>
-                    <p>C# · SQL Server · CRUD · JavaScript</p>
-                </div>
-            </article>
-
-            <article class="project-card">
-                <div class="project-thumb">
-                    <img src="wedding.png" alt="AI Chatbot System">
-                </div>
-
-                <div class="project-body">
-                    <h3>Wedding Hall Management System</h3>
-                    <p>C# · WPF · Billing · Inventory · SQL Server</p>
-                </div>
-            </article>
-        
-        </div>
-    </section>
-
-<section id="resume" class="section">
-  <h2>Resume</h2>
-  <p>You can download my resume below:</p>
-
-  <a href="assets/manikandan_AR.pdf" download class="btn">
-    Download Resume
-  </a>
+    <div class="doing-card doing-card--mid">
+      <div class="doing-icon">🖥️</div>
+      <h3>Backend &amp; API Engineering</h3>
+      <p>Designing robust backend systems and REST APIs with C#, Java, .NET and Spring Boot for real-world products.</p>
+    </div>
+    <div class="doing-card">
+      <div class="doing-icon">🤖</div>
+      <h3>AI &amp; ML Projects</h3>
+      <p>Exploring AI-powered applications, data analysis with Pandas, and intelligent, security-conscious systems.</p>
+    </div>
+  </div>
 </section>
 
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Email: manikandanmnm5656@gmail.com</p>
-    <p>Phone: +91 80159 03646</p>
-  </section>
+<!-- ===== SKILLS ===== -->
+<section class="skills" id="skills">
+  <h2 class="section-title">Technical Skills</h2>
+  <div class="skills-grid" id="skillsGrid">
+    <!-- populated by JS -->
+  </div>
+</section>
 
-  <footer>
-    <p>© 2026 Manikandan AR</p>
-  </footer>
+<!-- ===== EXPERIENCE ===== -->
+<section class="experience" id="experience">
 
-  <script src="script.js"></script>
+    <h2 class="section-title">Experience</h2>
+
+    <div class="experience-container">
+
+        <!-- Experience 1 -->
+        <div class="experience-card">
+
+            <div class="experience-logo">
+                <img src="intern.png" alt="Akhilsoft">
+            </div>
+
+            <div class="experience-content">
+                <h3>Full Stack Development Intern</h3>
+
+                <h4>Akhilsoft Solutions • 2025</h4>
+
+                <p>
+                    Developed full-stack web applications using React.js,
+                    ASP.NET Core, C#.NET and SQL Server.
+                    Worked in Agile methodology and collaborated with
+                    developers to build scalable business applications.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================== PROJECTS ===================== -->
+
+<section class="projects" id="projects">
+
+    <h2 class="section-title">Projects</h2>
+
+    <div class="projects-container">
+
+        <!-- Previous Button -->
+        <button class="project-btn prev-btn">
+            &#10094;
+        </button>
+
+        <!-- Slider -->
+        <div class="projects-slider">
+
+            <div class="projects-track" id="projectsTrack">
+
+                <!-- =============================
+                     ONLY PROJECT CARDS GO HERE
+                     DO NOT CREATE PAGES
+                ============================== -->
+
+                <!-- Project 1 -->
+                <article class="project-card">
+
+                    <div class="project-thumb">
+                        <img src="ai novel.png" alt="AI Novel Generation">
+                    </div>
+
+                    <div class="project-body">
+                        <h3>AI Novel Generation System</h3>
+                        <p>XAML • NLP • LiteDB • Llama 3.2 • C#</p>
+                    </div>
+
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card">
+
+                    <div class="project-thumb">
+                        <img src="hotel.png" alt="Hotel Management">
+                    </div>
+
+                    <div class="project-body">
+                        <h3>Hotel Management System</h3>
+                        <p>C# • SQL Server • CRUD • JavaScript</p>
+                    </div>
+
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card">
+
+                    <div class="project-thumb">
+                        <img src="miniSocial.png" alt="Mini Social Media">
+                    </div>
+
+                    <div class="project-body">
+                        <h3>Mini Social Media App</h3>
+                        <p>C# • .NET • JavaScript • HTML • CSS • SQL Server • JWT</p>
+                    </div>
+
+                </article>
+
+                <!-- Project 4 -->
+                <article class="project-card">
+
+                    <div class="project-thumb">
+                        <img src="wedding.png" alt="Wedding Hall">
+                    </div>
+
+                    <div class="project-body">
+                        <h3>Wedding Hall Management</h3>
+                        <p>WPF • C# • SQL Server</p>
+                    </div>
+
+                </article>
+
+                <!-- Project 5 -->
+                <article class="project-card">
+
+                    <div class="project-thumb">
+                        <img src="Ecommerce.png" alt="E-Commerce">
+                    </div>
+
+                    <div class="project-body">
+                        <h3>E-Commerce Website</h3>
+                        <p>ReactJS • SpringBoot • java • H2 database</p>
+                    </div>
+
+                </article>
+
+                <!-- Project 6 -->
+                <article class="project-card">
+
+                    <div class="project-thumb">
+                        <img src="todotask.png" alt="To Do">
+                    </div>
+
+                    <div class="project-body">
+                        <h3>To Do Application</h3>
+                        <p>.NET MAUI • SQLite • XAML</p>
+                    </div>
+
+                </article>
+
+                <!-- Project 7 -->
+                <article class="project-card">
+
+                    <div class="project-thumb">
+                        <img src="quoteOfDay.png" alt="To Do">
+                    </div>
+
+                    <div class="project-body">
+                        <h3>quote of the day Application</h3>
+                        <p>.NET MAUI • SQLite • XAML</p>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+        <!-- Next Button -->
+        <button class="project-btn next-btn">
+            &#10095;
+        </button>
+
+    </div>
+
+    <!-- Dots -->
+    <div class="project-dots" id="projectDots"></div>
+
+</section>
+
+<!-- ===== CERTIFICATES ===== -->
+<section class="certificates" id="certificates">
+  <h2 class="section-title">Certificates</h2>
+  <div class="cert-grid">
+    <div class="cert-card">
+      <div class="cert-icon">📜</div>
+      <h3>C# certification- udemy</h3>
+      <p>2025</p>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">📜</div>
+      <h3>ASP.NET certification- udemy</h3>
+      <p>2026</p>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">📜</div>
+      <h3>SQL certification- udemy</h3>
+      <p>2026</p>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">📜</div>
+      <h3>JavaScript certification- udemy</h3>
+      <p>2026</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact" id="contact">
+  <h2 class="section-title">Contact Me</h2>
+
+  <form class="contact-form" id="contactForm">
+    <input
+      type="text"
+      name="from_name"
+      placeholder="Your Name"
+      required>
+
+    <input
+      type="email"
+      name="reply_to"
+      placeholder="Email"
+      required>
+
+    <textarea
+      name="message"
+      placeholder="Message"
+      required></textarea>
+
+    <button
+      type="submit"
+      class="btn btn-primary btn-block">
+      Send Message
+    </button>
+  </form>
+
+  <p class="form-note" id="formNote"></p>
+</section>
+
+<footer class="footer">
+  <p>&copy; <span id="year"></span> AR Manikandan. All rights reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
