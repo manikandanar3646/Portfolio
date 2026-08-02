@@ -1383,3 +1383,303 @@ html[data-theme="light"] .blob{
     animation: none !important;
   }
 }
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+/* ---------------- TABLETS ---------------- */
+
+@media (max-width: 992px){
+
+  .hero{
+    min-height: auto;
+    padding: 4rem 2rem;
+  }
+
+  .hero-inner{
+    grid-template-columns: 1fr;
+    text-align:center;
+    gap:3rem;
+  }
+
+  .hero-photo-wrap{
+    order:-1;
+  }
+
+  .hero-desc{
+    margin-inline:auto;
+  }
+
+  .hero-cta{
+    justify-content:center;
+  }
+
+  .socials{
+    justify-content:center;
+  }
+
+  .scroll-cue{
+    display:none;
+  }
+}
+
+
+/* ---------------- MOBILE ---------------- */
+
+@media (max-width:768px){
+
+/* ---------- Navbar ---------- */
+
+.nav-inner{
+    padding:1rem;
+}
+
+.logo{
+    font-size:2rem;
+}
+
+.nav-links{
+    position:fixed;
+    top:72px;
+    left:0;
+    width:100%;
+    background:var(--surface);
+    flex-direction:column;
+    align-items:center;
+    gap:1.5rem;
+    padding:2rem 0;
+
+    transform:translateY(-150%);
+    transition:.35s;
+    border-bottom:1px solid var(--border);
+}
+
+.nav-links.active{
+    transform:translateY(0);
+}
+
+.hamburger{
+    display:flex;
+}
+
+/* ---------- Hero ---------- */
+
+.hero{
+
+    min-height:auto;
+
+    padding:
+
+    2rem 1.2rem 4rem;
+}
+
+.hero-inner{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:2rem;
+}
+
+/* Photo first */
+
+.hero-photo-wrap{
+
+    order:-1;
+}
+
+.hero-photo-ring{
+
+    width:270px;
+
+    height:270px;
+
+    padding:8px;
+
+    border-width:4px;
+}
+
+/* Text */
+
+.hero-text{
+
+    text-align:center;
+}
+
+.hello{
+
+    font-size:1.5rem;
+}
+
+.hero-name{
+
+    font-size:3rem;
+
+    line-height:1.15;
+}
+
+.hero-name br{
+
+    display:block;
+}
+
+.role-line{
+
+    font-size:1.45rem;
+
+    min-height:auto;
+
+    margin-bottom:1rem;
+}
+
+.hero-desc{
+
+    max-width:100%;
+
+    font-size:1rem;
+
+    line-height:1.8;
+
+    margin:0 auto 1.8rem;
+}
+
+/* Buttons */
+
+.hero-cta{
+
+    flex-direction:column;
+
+    align-items:center;
+
+    width:100%;
+}
+
+.hero-cta .btn{
+
+    width:100%;
+
+    max-width:320px;
+}
+
+/* Social Icons */
+
+.socials{
+
+    justify-content:center;
+}
+
+/* Decorative blobs */
+
+.blob{
+
+    opacity:.45;
+}
+
+.blob-blue-lg{
+
+    width:170px;
+    height:170px;
+    top:5%;
+    right:-35px;
+}
+
+.blob-orange-lg{
+
+    width:150px;
+    height:150px;
+    bottom:-40px;
+    right:-40px;
+}
+
+.blob-blue-md{
+
+    width:90px;
+    height:90px;
+    left:5%;
+    bottom:8%;
+}
+
+.blob-red{
+
+    width:90px;
+    height:90px;
+    left:8%;
+    top:12%;
+}
+
+.blob-orange{
+
+    width:70px;
+    height:70px;
+}
+
+.blob-yellow{
+
+    width:35px;
+    height:35px;
+}
+
+.blob-yellow-sm{
+
+    display:none;
+}
+
+.blob-red-sm{
+
+    display:none;
+}
+
+.scroll-cue{
+
+    display:none;
+}
+
+}
+
+
+/* ---------------- SMALL PHONES ---------------- */
+
+@media (max-width:480px){
+
+.hero{
+
+    padding:1.5rem 1rem 3rem;
+}
+
+.hero-photo-ring{
+
+    width:240px;
+
+    height:240px;
+}
+
+.hero-name{
+
+    font-size:2.5rem;
+}
+
+.role-line{
+
+    font-size:1.2rem;
+}
+
+.hero-desc{
+
+    font-size:.95rem;
+}
+
+.logo{
+
+    font-size:1.8rem;
+}
+
+.theme-toggle{
+
+    width:42px;
+
+    height:42px;
+}
+
+}
