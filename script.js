@@ -156,7 +156,7 @@ document.getElementById('downloadResume').addEventListener('click', (e) => {
     e.preventDefault();
 
     const link = document.createElement('a');
-    link.href = 'MANIKANDAN.AR.pdf';
+    link.href = 'MANIKANDAN.AR_.pdf';
     link.download = 'Manikandan_AR.pdf';
     document.body.appendChild(link);
     link.click();
