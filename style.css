@@ -594,6 +594,88 @@ html[data-theme="light"] .blob{
   display: block;
 }
 
+/* =========================================================
+   ABOUT SECTION — NARROWER WIDTH
+========================================================= */
+
+.about {
+    width: 92%;
+    max-width: 1250px;
+    margin: 0 auto;
+
+    min-height: 480px;
+
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* Keep the two-column structure */
+.about-text {
+    padding: 3.5rem clamp(2rem, 4vw, 4rem);
+}
+
+.about-photo {
+    min-height: 480px;
+}
+/* ---------- ABOUT HEADING ---------- */
+
+.about-text .section-title--left {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+/* ---------- LARGE SCREENS ---------- */
+
+@media (min-width: 1400px) {
+
+    .about {
+        width: 88%;
+        max-width: 1250px;
+    }
+
+}
+
+
+/* ---------- TABLETS ---------- */
+
+@media (max-width: 900px) {
+
+    .about {
+        width: 94%;
+        min-height: auto;
+    }
+
+    .about-text {
+        padding: 3rem 2rem;
+    }
+
+    .about-photo {
+        min-height: 350px;
+    }
+
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 600px) {
+
+    .about {
+        width: 94%;
+        border-radius: 14px;
+    }
+
+    .about-text {
+        padding: 2.5rem 1.3rem;
+    }
+
+    .about-photo {
+        min-height: 300px;
+    }
+
+}
+
 
 /* ---------- WHAT I'M DOING ---------- */
 
@@ -688,113 +770,383 @@ html[data-theme="light"] .blob{
   font-weight: 600;
 }
 
-/*==========================
+/* ==========================
         EXPERIENCE
-==========================*/
+========================== */
 
-.experience{
-    padding:6rem 2rem;
-    background:var(--bg-alt);
+.experience {
+    padding: 4rem 2rem;
+    background: var(--bg-alt);
 }
 
-.experience-container{
-    max-width:1100px;
-    margin:0 auto;
-    display:flex;
-    flex-direction:column;
-    gap:40px;
+
+/* ==========================
+        SECTION TITLE
+========================== */
+
+.experience .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
-.experience-card{
-    display:flex;
-    align-items:stretch;
-    background:#ffffff;
-    border-radius:10px;
-    overflow:hidden;
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
-    transition:.3s ease;
-}
 
-.experience-card:hover{
-    transform:translateY(-6px);
-}
+/* ==========================
+        CONTAINER
+========================== */
 
-.experience-card{
-    display: flex;
-    align-items: stretch;   /* Make both sides equal height */
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.experience-logo{
-    width: 260px;
-    min-width: 260px;
-    background: var(--accent);
+.experience-container {
+    max-width: 1100px;
+    margin: 0 auto;
 
     display: flex;
+    flex-direction: column;
+
+    gap: 30px;
+}
+
+
+/* ==========================
+        EXPERIENCE CARD
+========================== */
+
+.experience-card {
+    display: flex;
+
+    /* IMPORTANT:
+       Keeps logo aligned to
+       the top of the content */
+    align-items: flex-start;
+
+    background: #101f2e;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 20px;
+
+    padding: 32px 40px;
+
+    box-sizing: border-box;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+    transition: all 0.3s ease;
+}
+
+
+/* ==========================
+        HOVER
+========================== */
+
+.experience-card:hover {
+    transform: translateY(-5px);
+
+    border-color: var(--accent);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ==========================
+        COMPANY LOGO
+========================== */
+
+.experience-logo {
+    width: 92px;
+    height: 92px;
+
+    min-width: 92px;
+
+    display: flex;
+
     justify-content: center;
     align-items: center;
 
-    /* Remove height:220px */
+    background: #ffffff;
 
-    clip-path: polygon(
-        0 0,
-        82% 0,
-        100% 50%,
-        82% 100%,
-        0 100%
-    );
+    border: 2px solid var(--accent);
+
+    border-radius: 14px;
+
+    padding: 10px;
+
+    box-sizing: border-box;
+
+    /* Space between logo and content */
+    margin-right: 32px;
+
+    /* Slightly aligns logo with job title */
+    margin-top: 2px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+
+    transition: all 0.3s ease;
 }
 
-.experience-logo img{
-    width:120px;
-    max-width:70%;
-    object-fit:contain;
+
+/* ==========================
+        LOGO IMAGE
+========================== */
+
+.experience-logo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
 }
 
-.experience-content{
-    flex:1;
-    padding:35px 45px;
+
+/* ==========================
+        LOGO HOVER
+========================== */
+
+.experience-card:hover .experience-logo {
+    transform: scale(1.04);
+
+    border-color: var(--accent);
 }
 
-.experience-content h3{
-    color:var(--accent);
-    font-size:1.6rem;
-    margin-bottom:12px;
+
+/* ==========================
+        EXPERIENCE CONTENT
+========================== */
+
+.experience-content {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 0;
 }
 
-.experience-content h4{
-    color:#444;
-    font-size:1.05rem;
-    margin-bottom:18px;
+
+/* ==========================
+        JOB INFORMATION
+========================== */
+
+.experience-info {
+    display: flex;
+
+    flex-direction: column;
+
+    margin-bottom: 14px;
 }
 
-.experience-content p{
-    color:#666;
-    line-height:1.8;
+
+/* ==========================
+        JOB TITLE
+========================== */
+
+.experience-content h3 {
+    color: #ffffff;
+
+    font-size: 1.55rem;
+
+    font-weight: 700;
+
+    line-height: 1.3;
+
+    margin: 0 0 5px 0;
 }
 
-@media(max-width:768px){
 
-.experience-card{
-    flex-direction:column;
+/* ==========================
+        COMPANY
+========================== */
+
+.experience-content h4 {
+    color: var(--accent);
+
+    font-size: 1.05rem;
+
+    font-weight: 500;
+
+    margin: 0;
 }
 
-.experience-logo{
-    width:100%;
-    height:180px;
+
+/* ==========================
+        DESCRIPTION
+========================== */
+
+.experience-description {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
 }
 
-.experience-logo::after{
-    display:none;
+
+/* ==========================
+        DESCRIPTION TEXT
+========================== */
+
+.experience-content p {
+    position: relative;
+
+    color: #d0d7df;
+
+    font-size: 1rem;
+
+    line-height: 1.65;
+
+    margin: 0;
+
+    padding-left: 20px;
 }
 
-.experience-content{
-    padding:30px;
-    text-align:center;
+
+/* ==========================
+        BULLET
+========================== */
+
+.experience-content p::before {
+    content: "•";
+
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+    color: var(--accent);
+
+    font-size: 1.2rem;
+
+    font-weight: bold;
 }
 
+
+/* ==========================
+        TABLET
+========================== */
+
+@media (max-width: 900px) {
+
+    .experience {
+        padding: 3.5rem 1.5rem;
+    }
+
+    .experience-container {
+        max-width: 95%;
+    }
+
+    .experience-card {
+        padding: 28px 30px;
+    }
+
+    .experience-logo {
+        width: 82px;
+        height: 82px;
+
+        min-width: 82px;
+
+        margin-right: 25px;
+    }
+
+    .experience-content h3 {
+        font-size: 1.4rem;
+    }
+}
+
+
+/* ==========================
+        MOBILE
+========================== */
+
+@media (max-width: 768px) {
+
+    .experience {
+        padding: 3rem 1.2rem;
+    }
+
+    .experience .section-title {
+        margin-bottom: 2.5rem;
+    }
+
+    .experience-container {
+        max-width: 100%;
+    }
+
+    .experience-card {
+        align-items: flex-start;
+
+        padding: 24px;
+
+        border-radius: 16px;
+    }
+
+    .experience-logo {
+        width: 68px;
+        height: 68px;
+
+        min-width: 68px;
+
+        margin-right: 18px;
+
+        margin-top: 2px;
+
+        border-radius: 10px;
+
+        padding: 7px;
+    }
+
+    .experience-content h3 {
+        font-size: 1.25rem;
+    }
+
+    .experience-content h4 {
+        font-size: 0.95rem;
+    }
+
+    .experience-content p {
+        font-size: 0.95rem;
+
+        line-height: 1.6;
+
+        padding-left: 18px;
+    }
+}
+
+
+/* ==========================
+        SMALL MOBILE
+========================== */
+
+@media (max-width: 500px) {
+
+    .experience {
+        padding: 2.5rem 1rem;
+    }
+
+    .experience-card {
+        padding: 20px;
+    }
+
+    .experience-logo {
+        width: 58px;
+        height: 58px;
+
+        min-width: 58px;
+
+        margin-right: 14px;
+
+        padding: 5px;
+    }
+
+    .experience-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .experience-content h4 {
+        font-size: 0.88rem;
+    }
+
+    .experience-content p {
+        font-size: 0.9rem;
+    }
 }
 
 
@@ -1131,6 +1483,52 @@ html[data-theme="light"] .blob{
 
 }
 
+/* ---------- PROJECT GITHUB BUTTON ---------- */
+
+.project-github {
+  margin-top: 1.2rem;
+}
+
+.github-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+
+  padding: 0.65rem 1.15rem;
+
+  background: #38bdf8;
+  color: #06202b;
+
+  border: 1px solid #38bdf8;
+  border-radius: 8px;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.github-btn i {
+  font-size: 1.05rem;
+}
+
+.github-btn:hover {
+  background: #7dd3fc;
+  border-color: #7dd3fc;
+  color: #06202b;
+
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(56, 189, 248, 0.3);
+}
+
 /* ---------- CERTIFICATES ---------- */
 
 .certificates{
@@ -1172,32 +1570,199 @@ html[data-theme="light"] .blob{
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 2rem 1.6rem;
 
-  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
 
-  transition: transform .25s ease, box-shadow .25s ease;
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    border-color .25s ease;
 }
 
 .cert-card:hover{
   transform: translateY(-6px);
   box-shadow: var(--shadow-glow);
+  border-color: var(--accent);
 }
 
-.cert-icon{
-  font-size: 2.2rem;
-  margin-bottom: 0.9rem;
+.cert-image-wrapper{
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: var(--surface-2);
+  overflow: hidden;
 }
 
-.cert-card h3{
-  margin: 0 0 0.4rem;
+.cert-image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+
+  transition: transform .35s ease;
+}
+
+.cert-card:hover .cert-image{
+  transform: scale(1.04);
+}
+
+.cert-info{
+  padding: 1.2rem 1.3rem 1.4rem;
+}
+
+.cert-info h3{
+  margin: 0 0 .45rem;
+  color: var(--text);
   font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.4;
 }
 
-.cert-card p{
-  color: var(--text-dim);
+.cert-info p{
   margin: 0;
-  font-size: 0.88rem;
+  color: var(--text-dim);
+  font-size: .9rem;
+}
+
+
+/* ---------- CERTIFICATE MODAL ---------- */
+
+.certificate-modal{
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 2rem;
+
+  background: rgba(0, 0, 0, .82);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity .25s ease,
+    visibility .25s ease;
+}
+
+.certificate-modal.active{
+  opacity: 1;
+  visibility: visible;
+}
+
+.certificate-modal-content{
+  max-width: 1000px;
+  max-height: 90vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: scale(.94);
+
+  transition: transform .25s ease;
+}
+
+.certificate-modal.active .certificate-modal-content{
+  transform: scale(1);
+}
+
+.certificate-modal-content img{
+  display: block;
+
+  max-width: 100%;
+  max-height: 90vh;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+
+  border-radius: var(--radius);
+
+  box-shadow: var(--shadow-glow);
+}
+
+.certificate-close{
+  position: absolute;
+
+  top: 1.5rem;
+  right: 1.5rem;
+
+  width: 44px;
+  height: 44px;
+
+  border: 1px solid var(--border);
+  border-radius: 50%;
+
+  background: var(--surface);
+  color: var(--text);
+
+  font-size: 2rem;
+  line-height: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  z-index: 1001;
+
+  transition:
+    background .2s ease,
+    color .2s ease,
+    transform .2s ease;
+}
+
+.certificate-close:hover{
+  background: var(--accent);
+  color: #06202b;
+  transform: scale(1.08);
+}
+
+
+/* ---------- CERTIFICATE RESPONSIVE ---------- */
+
+@media (max-width: 900px){
+
+  .cert-card{
+    flex: 0 0 calc((100% - 1.6rem) / 2);
+  }
+
+}
+
+@media (max-width: 600px){
+
+  .certificates{
+    padding: 5rem 1rem;
+  }
+
+  .cert-card{
+    flex: 0 0 100%;
+  }
+
+  .certificate-modal{
+    padding: 1rem;
+  }
+
+  .certificate-modal-content img{
+    max-height: 82vh;
+  }
+
+  .certificate-close{
+    top: 1rem;
+    right: 1rem;
+
+    width: 40px;
+    height: 40px;
+
+    font-size: 1.7rem;
+  }
+
 }
 
 
@@ -1422,6 +1987,245 @@ html[data-theme="light"] .blob{
   .scroll-cue{
     display:none;
   }
+}
+
+/* =========================================================
+   VALUE SECTION
+========================================================= */
+
+.value-section {
+  padding: 6rem 2rem;
+  background: var(--bg);
+}
+
+.value-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-label {
+  display: block;
+  margin-bottom: 0.8rem;
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.value-title {
+  margin: 0 0 1rem;
+  color: var(--text);
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.2;
+  text-align: center;
+}
+
+.value-title span {
+  color: var(--accent);
+}
+
+.value-description {
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  color: var(--text-dim);
+  font-size: 1rem;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.value-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  padding: 1.6rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-glow);
+}
+
+.value-icon {
+  flex: 0 0 52px;
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+  background: var(--surface-2);
+  color: var(--accent);
+  font-size: 1.25rem;
+
+  border: 1px solid var(--border);
+}
+
+.value-content h3 {
+  margin: 0 0 0.5rem;
+  color: var(--text);
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+.value-content p {
+  margin: 0;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+/* =========================================================
+   KEY ACHIEVEMENTS SECTION
+========================================================= */
+
+.achievements {
+  padding: 6rem 2rem;
+  background: var(--bg-alt);
+}
+
+.achievements-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Center ACHIEVEMENTS label */
+.achievements-container > .section-label {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0.8rem;
+}
+
+/* Center Key Achievements heading */
+.achievements-title {
+  margin: 0 0 2.5rem;
+  color: var(--text);
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.2;
+  text-align: center;
+}
+
+.achievements-title span {
+  color: var(--accent);
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.achievement-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  padding: 1.6rem;
+
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.achievement-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-glow);
+}
+
+.achievement-icon {
+  flex: 0 0 52px;
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+  background: var(--surface-2);
+  color: var(--accent);
+  font-size: 1.25rem;
+
+  border: 1px solid var(--border);
+}
+
+.achievement-content h3 {
+  margin: 0 0 0.5rem;
+  color: var(--text);
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+.achievement-content p {
+  margin: 0;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   VALUE + ACHIEVEMENTS RESPONSIVE
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .value-grid,
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .value-section,
+  .achievements {
+    padding: 5rem 1rem;
+  }
+
+  .value-title,
+  .achievements-title {
+    font-size: 2rem;
+  }
+
+  .value-card,
+  .achievement-card {
+    padding: 1.3rem;
+    gap: 1rem;
+  }
+
+  .value-icon,
+  .achievement-icon {
+    flex: 0 0 46px;
+    width: 46px;
+    height: 46px;
+    font-size: 1.1rem;
+  }
+
 }
 
 

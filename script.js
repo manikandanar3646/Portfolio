@@ -74,11 +74,11 @@ const skills = [
   { name: 'Java',          icon: 'devicon-java-plain colored' },
   { name: 'Spring Boot',   icon: 'devicon-spring-plain colored' },
   { name: 'MS SQL Server', icon: 'devicon-microsoftsqlserver-plain colored' },
-  { name: 'React.js',      icon: 'devicon-react-original colored' },
+  { name: 'React JS',      icon: 'devicon-react-original colored' },
   { name: 'JavaScript',    icon: 'devicon-javascript-plain colored' },
   { name: 'HTML',          icon: 'devicon-html5-plain colored' },
   { name: 'CSS',           icon: 'devicon-css3-plain colored' },
-  { name: 'unity',         icon: 'devicon-unity-plain colored' },
+  { name: 'GitHub',        icon: 'devicon-github-plain colored' },
 ];
 
 const skillsGrid = document.getElementById('skillsGrid');
@@ -163,42 +163,7 @@ document.getElementById('downloadResume').addEventListener('click', (e) => {
     document.body.removeChild(link);
 });
 
-/* ---------- Certificate Drag/Swipe Carousel ---------- */
 
-const certGrid = document.querySelector('.cert-grid');
-
-let isDragging = false;
-let startX;
-let scrollLeft;
-
-certGrid.addEventListener('mousedown', (e) => {
-    isDragging = true;
-    certGrid.classList.add('dragging');
-
-    startX = e.pageX - certGrid.offsetLeft;
-    scrollLeft = certGrid.scrollLeft;
-});
-
-certGrid.addEventListener('mouseleave', () => {
-    isDragging = false;
-    certGrid.classList.remove('dragging');
-});
-
-certGrid.addEventListener('mouseup', () => {
-    isDragging = false;
-    certGrid.classList.remove('dragging');
-});
-
-certGrid.addEventListener('mousemove', (e) => {
-    if (!isDragging) return;
-
-    e.preventDefault();
-
-    const x = e.pageX - certGrid.offsetLeft;
-    const walk = (x - startX) * 1.5;
-
-    certGrid.scrollLeft = scrollLeft - walk;
-});
 
 
 /* ---------- Projects 6-Item Horizontal Carousel ---------- */
