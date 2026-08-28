@@ -36,10 +36,10 @@ navLinks.querySelectorAll('a').forEach(link =>
 /* ---------- Typing role animation ---------- */
 const roles = [
   'Full Stack Developer',
-  'Dot Net Developer',
-  'Ai Application Developer',
+  '.NET Developer',
+  'AI Application Developer',
   'Backend Developer',
-  'Frontend Developer',
+  'Software Developer',
 ];
 const typedEl = document.getElementById('typedRole');
 let roleIndex = 0, charIndex = 0, deleting = false;
