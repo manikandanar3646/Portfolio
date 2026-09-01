@@ -9,8 +9,14 @@
 ========================================================= */
 
 :root{
+  /* ---------- COLOUR 1 — GLOBAL BACKGROUND ---------- */
+
   --bg: #0a1420;
+
+  /* ---------- COLOUR 2 — CONTENT BACKGROUND ---------- */
+
   --bg-alt: #0d1b2a;
+
   --surface: #101f2f;
   --surface-2: #14293c;
 
@@ -47,6 +53,7 @@
     monospace;
 
   --container-width: 1200px;
+
   --section-padding: 6rem 2rem;
 }
 
@@ -56,8 +63,15 @@
 ========================================================= */
 
 html[data-theme="light"]{
+
+  /* COLOUR 1 */
+
   --bg: #f3f7fb;
+
+  /* COLOUR 2 */
+
   --bg-alt: #eaf1f8;
+
   --surface: #ffffff;
   --surface-2: #eef4f9;
 
@@ -65,6 +79,9 @@ html[data-theme="light"]{
 
   --text: #0d1b2a;
   --text-dim: #4d6072;
+
+  --accent: #0ea5c7;
+  --accent-2: #0284c7;
 
   --accent-soft: rgba(14,165,199,0.10);
 }
@@ -83,6 +100,8 @@ html[data-theme="light"]{
 html{
   scroll-behavior: smooth;
   overflow-x: clip;
+
+  background: var(--bg);
 }
 
 body{
@@ -90,7 +109,10 @@ body{
 
   font-family: var(--font-display);
 
+  /* COLOUR 1 */
+
   background: var(--bg);
+
   color: var(--text);
 
   transition:
@@ -174,8 +196,10 @@ ul{
 
   z-index: 100;
 
+  /* COLOUR 1 */
+
   background:
-    rgba(10,20,32,0.85);
+    rgba(10,20,32,0.88);
 
   backdrop-filter: blur(10px);
 
@@ -185,7 +209,7 @@ ul{
 
 html[data-theme="light"] .navbar{
   background:
-    rgba(243,247,251,0.9);
+    rgba(243,247,251,0.92);
 }
 
 .nav-inner{
@@ -339,6 +363,7 @@ html[data-theme="light"] .navbar{
 
 /* =========================================================
    HERO
+   ENTIRE HERO = COLOUR 1
 ========================================================= */
 
 .hero{
@@ -353,168 +378,160 @@ html[data-theme="light"] .navbar{
   overflow: hidden;
 
   padding: 3rem 0;
+
+  background: var(--bg);
 }
 
 
-/* ---------- HERO BLOBS ---------- */
+/* =========================================================
+   HERO BLOBS
+========================================================= */
 
-.hero-blobs{
+.hero-blobs {
   position: absolute;
-
   inset: 0;
-
   z-index: 0;
-
   pointer-events: none;
+  overflow: hidden;
 }
 
-.blob{
+.hero .blob {
   position: absolute;
-
+  display: block;
   border-radius: 50%;
-
+  pointer-events: none;
   filter: blur(.5px);
-
   opacity: .9;
+  will-change: transform;
 }
 
-html[data-theme="light"] .blob{
+html[data-theme="light"] .hero .blob {
   opacity: .55;
 }
 
+/* =========================================================
+   HERO BALLS — DESKTOP
+========================================================= */
 
-/* ---------- BLOB RED ---------- */
-
-.blob-red{
+.hero .blob-red {
   width: 190px;
   height: 190px;
-
   background: var(--red);
-
   top: 14%;
   left: 24%;
-
-  animation:
-    float 7s ease-in-out infinite;
+  animation: heroBallFloat1 7s ease-in-out infinite;
 }
 
-.blob-red-sm{
-  width: 70px;
-  height: 70px;
-
-  background: var(--red);
-
-  bottom: 12%;
-  right: 22%;
-
-  animation:
-    float 6s ease-in-out infinite reverse;
-}
-
-
-/* ---------- BLOB YELLOW ---------- */
-
-.blob-yellow{
-  width: 55px;
-  height: 55px;
-
-  background: var(--yellow);
-
-  top: 28%;
-  left: 41%;
-
-  animation:
-    float 5s ease-in-out infinite;
-}
-
-.blob-yellow-sm{
+.hero .blob-yellow-sm {
   width: 38px;
   height: 38px;
-
   background: var(--yellow);
-
   top: 8%;
   left: 38%;
-
-  animation:
-    float 6.5s ease-in-out infinite reverse;
+  animation: heroBallFloat2 6.5s ease-in-out infinite;
 }
 
-
-/* ---------- BLOB ORANGE ---------- */
-
-.blob-orange{
+.hero .blob-orange {
   width: 90px;
   height: 90px;
-
   background: var(--orange);
-
   top: 4%;
   left: 56%;
-
-  animation:
-    float 8s ease-in-out infinite;
+  animation: heroBallFloat3 8s ease-in-out infinite;
 }
 
-.blob-orange-lg{
-  width: 220px;
-  height: 220px;
-
-  background: var(--orange);
-
-  bottom: -8%;
-  right: -6%;
-
-  animation:
-    float 9s ease-in-out infinite reverse;
-}
-
-
-/* ---------- BLOB BLUE ---------- */
-
-.blob-blue-lg{
+.hero .blob-blue-lg {
   width: 260px;
   height: 260px;
-
   background: var(--blue);
-
   top: 6%;
   right: 2%;
-
-  animation:
-    float 10s ease-in-out infinite;
+  animation: heroBallFloat4 10s ease-in-out infinite;
 }
 
-.blob-blue-md{
+.hero .blob-yellow {
+  width: 55px;
+  height: 55px;
+  background: var(--yellow);
+  top: 28%;
+  left: 41%;
+  animation: heroBallFloat5 5s ease-in-out infinite;
+}
+
+.hero .blob-blue-md {
   width: 160px;
   height: 160px;
-
   background: var(--blue);
-
   bottom: 6%;
   left: 38%;
-
-  animation:
-    float 7.5s ease-in-out infinite reverse;
+  animation: heroBallFloat6 7.5s ease-in-out infinite;
 }
 
-
-/* ---------- FLOAT ANIMATION ---------- */
-
-@keyframes float{
-
-  0%,
-  100%{
-    transform: translateY(0);
-  }
-
-  50%{
-    transform: translateY(-18px);
-  }
+.hero .blob-red-sm {
+  width: 70px;
+  height: 70px;
+  background: var(--red);
+  bottom: 12%;
+  right: 22%;
+  animation: heroBallFloat7 6s ease-in-out infinite;
 }
 
+.hero .blob-orange-lg {
+  width: 220px;
+  height: 220px;
+  background: var(--orange);
+  bottom: -8%;
+  right: -6%;
+  animation: heroBallFloat8 9s ease-in-out infinite;
+}
 
-/* ---------- HERO INNER ---------- */
+/* =========================================================
+   FLOATING MOTION
+========================================================= */
+
+@keyframes heroBallFloat1 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(8px, -18px); }
+}
+
+@keyframes heroBallFloat2 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-6px, -14px); }
+}
+
+@keyframes heroBallFloat3 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(7px, -20px); }
+}
+
+@keyframes heroBallFloat4 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-10px, -16px); }
+}
+
+@keyframes heroBallFloat5 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(5px, -15px); }
+}
+
+@keyframes heroBallFloat6 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-7px, -18px); }
+}
+
+@keyframes heroBallFloat7 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(6px, -15px); }
+}
+
+@keyframes heroBallFloat8 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-8px, -18px); }
+}
+
+/* =========================================================
+   HERO INNER
+========================================================= */
 
 .hero-inner{
   position: relative;
@@ -533,7 +550,9 @@ html[data-theme="light"] .blob{
 }
 
 
-/* ---------- HERO TEXT ---------- */
+/* =========================================================
+   HERO TEXT
+========================================================= */
 
 .hello{
   color: var(--accent);
@@ -628,7 +647,9 @@ html[data-theme="light"] .blob{
 }
 
 
-/* ---------- HERO BUTTONS ---------- */
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
 
 .hero-cta{
   display: flex;
@@ -691,7 +712,9 @@ html[data-theme="light"] .blob{
 }
 
 
-/* ---------- SOCIALS ---------- */
+/* =========================================================
+   SOCIALS
+========================================================= */
 
 .socials{
   display: flex;
@@ -732,7 +755,9 @@ html[data-theme="light"] .blob{
 }
 
 
-/* ---------- HERO PHOTO ---------- */
+/* =========================================================
+   HERO PHOTO
+========================================================= */
 
 .hero-photo-wrap{
   position: relative;
@@ -803,7 +828,9 @@ html[data-theme="light"] .blob{
 }
 
 
-/* ---------- SCROLL CUE ---------- */
+/* =========================================================
+   SCROLL CUE
+========================================================= */
 
 .scroll-cue{
   position: absolute;
@@ -866,7 +893,327 @@ html[data-theme="light"] .blob{
 
 
 /* =========================================================
+   TABLET — HERO
+========================================================= */
+
+@media (max-width: 992px){
+
+  .hero{
+    min-height: auto;
+
+    padding:
+      4rem 0
+      5rem;
+  }
+
+  .hero-inner{
+    grid-template-columns: 1fr;
+
+    text-align: center;
+
+    gap: 3rem;
+  }
+
+  .hero-photo-wrap{
+    order: -1;
+  }
+
+  .hero-desc{
+    margin-inline: auto;
+  }
+
+  .hero-cta{
+    justify-content: center;
+  }
+
+  .socials{
+    justify-content: center;
+  }
+
+  .scroll-cue{
+    display: none;
+  }
+
+
+}
+
+
+/* =========================================================
+   MOBILE — HERO
+========================================================= */
+
+@media (max-width: 768px){
+
+  .hero{
+    min-height: auto;
+
+    padding:
+      2rem 0
+      4rem;
+  }
+
+  .hero-inner{
+    width: calc(100% - 2rem);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2rem;
+  }
+
+  .hero-photo-wrap{
+    order: -1;
+  }
+
+  .hero-photo-ring{
+    width: 270px;
+    height: 270px;
+
+    padding: 8px;
+  }
+
+  .hero-text{
+    text-align: center;
+
+    width: 100%;
+  }
+
+  .hello{
+    font-size: 1.4rem;
+  }
+
+  .hero-name{
+    font-size:
+      clamp(2.3rem, 10vw, 3rem);
+
+    line-height: 1.15;
+  }
+
+  .role-line{
+    font-size:
+      clamp(1.15rem, 5vw, 1.45rem);
+
+    min-height: auto;
+
+    margin-bottom: 1rem;
+  }
+
+  .hero-desc{
+    max-width: 100%;
+
+    margin:
+      0 auto
+      1.8rem;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+  }
+
+  .hero-cta{
+    width: 100%;
+
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  .hero-cta .btn{
+    width: min(
+      100%,
+      320px
+    );
+
+    text-align: center;
+  }
+
+  .socials{
+    justify-content: center;
+  }
+
+
+
+
+  /* =======================================================
+     HERO BALLS — MOBILE
+  ======================================================= */
+
+  .hero .blob {
+    opacity: .4;
+  }
+
+  .hero .blob-red {
+    width: 80px;
+    height: 80px;
+    top: 18%;
+    left: -25px;
+  }
+
+  .hero .blob-yellow-sm {
+    width: 25px;
+    height: 25px;
+    top: 8%;
+    left: 18%;
+  }
+
+  .hero .blob-orange {
+    width: 55px;
+    height: 55px;
+    top: 7%;
+    left: auto;
+    right: 18%;
+  }
+
+  .hero .blob-blue-lg {
+    width: 140px;
+    height: 140px;
+    top: 3%;
+    right: -55px;
+  }
+
+  .hero .blob-yellow {
+    width: 30px;
+    height: 30px;
+    top: 38%;
+    left: 5%;
+  }
+
+  .hero .blob-blue-md {
+    width: 70px;
+    height: 70px;
+    bottom: 10%;
+    left: -25px;
+  }
+
+  .hero .blob-red-sm {
+    width: 50px;
+    height: 50px;
+    bottom: 15%;
+    right: 10%;
+  }
+
+  .hero .blob-orange-lg {
+    width: 110px;
+    height: 110px;
+    bottom: -40px;
+    right: -45px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE — HERO
+========================================================= */
+
+@media (max-width: 500px){
+
+  .hero{
+    padding:
+      1.5rem 0
+      3rem;
+  }
+
+  .hero-inner{
+    width: calc(100% - 1.5rem);
+
+    gap: 1.8rem;
+  }
+
+  .hero-photo-ring{
+    width: 240px;
+    height: 240px;
+
+    padding: 7px;
+  }
+
+  .hero-name{
+    font-size: 2.5rem;
+  }
+
+  .role-line{
+    font-size: 1.2rem;
+  }
+
+  .hero-desc{
+    font-size: .95rem;
+  }
+
+
+
+
+  /* Smaller hero balls for very small screens */
+
+  .hero .blob-red {
+    width: 60px;
+    height: 60px;
+    left: -25px;
+  }
+
+  .hero .blob-yellow-sm {
+    width: 22px;
+    height: 22px;
+  }
+
+  .hero .blob-orange {
+    width: 45px;
+    height: 45px;
+  }
+
+  .hero .blob-blue-lg {
+    width: 115px;
+    height: 115px;
+    right: -50px;
+  }
+
+  .hero .blob-yellow {
+    width: 26px;
+    height: 26px;
+  }
+
+  .hero .blob-blue-md {
+    width: 60px;
+    height: 60px;
+    left: -25px;
+  }
+
+  .hero .blob-red-sm {
+    width: 45px;
+    height: 45px;
+  }
+
+  .hero .blob-orange-lg {
+    width: 100px;
+    height: 100px;
+    right: -45px;
+    bottom: -35px;
+  }
+
+}
+
+
+/* =========================================================
+   HERO REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce){
+
+  .hero .blob,
+  .hero .wave,
+  .hero .cursor,
+  .hero .scroll-cue span::after{
+    animation-duration: .01ms !important;
+
+    animation-iteration-count: 1 !important;
+  }
+}
+
+
+/* =========================================================
    ABOUT
+   OUTER = COLOUR 1
+   CARD/CONTENT = COLOUR 2
 ========================================================= */
 
 .about{
@@ -886,6 +1233,8 @@ html[data-theme="light"] .blob{
     minmax(0, .85fr);
 
   align-items: stretch;
+
+  /* COLOUR 2 */
 
   background: var(--bg-alt);
 
@@ -912,6 +1261,8 @@ html[data-theme="light"] .blob{
   flex-direction: column;
 
   justify-content: center;
+
+  background: var(--bg-alt);
 }
 
 .about-text .section-title--left{
@@ -947,6 +1298,8 @@ html[data-theme="light"] .blob{
   min-height: 480px;
 
   overflow: hidden;
+
+  /* COLOUR 2 */
 
   background: var(--bg-alt);
 
@@ -988,13 +1341,22 @@ html[data-theme="light"] .blob{
 
 
 /* =========================================================
+   TOPIC SECTIONS
+   OUTER BACKGROUND = COLOUR 1
+   CONTENT AREAS = COLOUR 2
+========================================================= */
+
+
+/* =========================================================
    WHAT I'M DOING
 ========================================================= */
 
 .doing{
   padding: var(--section-padding);
 
-  background: var(--bg-alt);
+  /* COLOUR 1 */
+
+  background: var(--bg);
 }
 
 .doing-grid{
@@ -1018,7 +1380,9 @@ html[data-theme="light"] .blob{
 
   padding: 2rem 1.6rem;
 
-  background: var(--surface);
+  /* COLOUR 2 */
+
+  background: var(--bg-alt);
 
   border:
     1px solid var(--border);
@@ -1074,6 +1438,8 @@ html[data-theme="light"] .blob{
 .skills{
   padding: var(--section-padding);
 
+  /* COLOUR 1 */
+
   background: var(--bg);
 }
 
@@ -1100,7 +1466,9 @@ html[data-theme="light"] .blob{
 
   text-align: center;
 
-  background: var(--surface);
+  /* COLOUR 2 */
+
+  background: var(--bg-alt);
 
   border:
     1px solid var(--border);
@@ -1146,7 +1514,9 @@ html[data-theme="light"] .blob{
 .experience{
   padding: 4rem 2rem;
 
-  background: var(--bg-alt);
+  /* COLOUR 1 */
+
+  background: var(--bg);
 }
 
 .experience .section-title{
@@ -1181,7 +1551,9 @@ html[data-theme="light"] .blob{
 
   padding: 32px 40px;
 
-  background: var(--surface);
+  /* COLOUR 2 */
+
+  background: var(--bg-alt);
 
   border:
     1px solid var(--border);
@@ -1336,7 +1708,9 @@ html[data-theme="light"] .blob{
 .projects{
   padding: var(--section-padding);
 
-  background: var(--bg-alt);
+  /* COLOUR 1 */
+
+  background: var(--bg);
 }
 
 .projects .section-title{
@@ -1456,7 +1830,9 @@ html[data-theme="light"] .blob{
 
   overflow: hidden;
 
-  background: var(--surface);
+  /* COLOUR 2 */
+
+  background: var(--bg-alt);
 
   border:
     1px solid var(--border);
@@ -1516,6 +1892,8 @@ html[data-theme="light"] .blob{
   display: flex;
 
   flex-direction: column;
+
+  background: var(--bg-alt);
 }
 
 .project-body h3{
@@ -1550,7 +1928,7 @@ html[data-theme="light"] .blob{
 
   border-radius: 18px;
 
-  background: transparent;
+  background: var(--bg-alt);
 }
 
 
@@ -1655,7 +2033,9 @@ html[data-theme="light"] .blob{
 .certificates{
   padding: var(--section-padding);
 
-  background: var(--bg-alt);
+  /* COLOUR 1 */
+
+  background: var(--bg);
 }
 
 .cert-grid{
@@ -1704,7 +2084,9 @@ html[data-theme="light"] .blob{
 
   overflow: hidden;
 
-  background: var(--surface);
+  /* COLOUR 2 */
+
+  background: var(--bg-alt);
 
   border:
     1px solid var(--border);
@@ -1757,6 +2139,8 @@ html[data-theme="light"] .blob{
     1.2rem
     1.3rem
     1.4rem;
+
+  background: var(--bg-alt);
 }
 
 .cert-info h3{
@@ -1782,6 +2166,7 @@ html[data-theme="light"] .blob{
 
 /* =========================================================
    CERTIFICATE MODAL
+   MODAL OVERLAY = COLOUR 1 / DARK OVERLAY
 ========================================================= */
 
 .certificate-modal{
@@ -1905,6 +2290,8 @@ html[data-theme="light"] .blob{
 .value-section{
   padding: var(--section-padding);
 
+  /* COLOUR 1 */
+
   background: var(--bg);
 }
 
@@ -1988,7 +2375,9 @@ html[data-theme="light"] .blob{
 
   padding: 1.6rem;
 
-  background: var(--surface);
+  /* COLOUR 2 */
+
+  background: var(--bg-alt);
 
   border:
     1px solid var(--border);
@@ -2065,7 +2454,9 @@ html[data-theme="light"] .blob{
 .achievements{
   padding: var(--section-padding);
 
-  background: var(--bg-alt);
+  /* COLOUR 1 */
+
+  background: var(--bg);
 }
 
 .achievements-container{
@@ -2125,7 +2516,9 @@ html[data-theme="light"] .blob{
 
   padding: 1.6rem;
 
-  background: var(--surface);
+  /* COLOUR 2 */
+
+  background: var(--bg-alt);
 
   border:
     1px solid var(--border);
@@ -2202,6 +2595,8 @@ html[data-theme="light"] .blob{
 .contact{
   padding: var(--section-padding);
 
+  /* COLOUR 1 */
+
   background: var(--bg);
 }
 
@@ -2218,6 +2613,17 @@ html[data-theme="light"] .blob{
   flex-direction: column;
 
   gap: 1.2rem;
+
+  /* COLOUR 2 */
+
+  background: var(--bg-alt);
+
+  padding: 2rem;
+
+  border:
+    1px solid var(--border);
+
+  border-radius: var(--radius);
 }
 
 .contact-form input,
@@ -2279,12 +2685,13 @@ html[data-theme="light"] .blob{
 
 /* =========================================================
    FOOTER
+   COLOUR 1
 ========================================================= */
 
 .footer{
   padding: 2rem;
 
-  background: var(--bg-alt);
+  background: var(--bg);
 
   border-top:
     1px solid var(--border);
@@ -2545,7 +2952,7 @@ html[data-theme="light"] .blob{
 
     padding: 2rem 1rem;
 
-    background: var(--surface);
+    background: var(--bg-alt);
 
     border-bottom:
       1px solid var(--border);
@@ -2925,6 +3332,8 @@ html[data-theme="light"] .blob{
 
   .contact-form{
     width: 100%;
+
+    padding: 1.5rem;
   }
 }
 
@@ -3161,6 +3570,10 @@ html[data-theme="light"] .blob{
   .contact{
     padding:
       4rem .75rem;
+  }
+
+  .contact-form{
+    padding: 1.2rem;
   }
 }
 
