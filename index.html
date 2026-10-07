@@ -1,221 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AR Manikandan | Portfolio</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/devicon.min.css">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<!-- ===== NAVBAR ===== -->
-<header class="navbar" id="navbar">
-  <div class="nav-inner">
-    <a href="#home" class="logo"><span class="logo-accent">AR</span> Manikandan</a>
-
-    <nav class="nav-links" id="navLinks">
-      <a href="#home" class="active">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#value">Value</a>
-      <a href="#achievements">Achievements</a>
-      <a href="#certificates">Certificates</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <div class="nav-actions">
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-        <svg id="themeIcon" width="18" height="18" viewBox="0 0 24 24" fill="none">
-          <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </div>
-</header>
-
-<!-- ===== HERO ===== -->
-<section class="hero" id="home">
-  <div class="hero-blobs" aria-hidden="true">
-    <span class="blob blob-red"></span>
-    <span class="blob blob-yellow-sm"></span>
-    <span class="blob blob-orange"></span>
-    <span class="blob blob-blue-lg"></span>
-    <span class="blob blob-yellow"></span>
-    <span class="blob blob-blue-md"></span>
-    <span class="blob blob-red-sm"></span>
-    <span class="blob blob-orange-lg"></span>
-  </div>
-
-  <div class="hero-inner">
-    <div class="hero-text">
-      <p class="hello">Hello <span class="wave">👋</span></p>
-      <h1 class="hero-name">I'm <span class="accent">AR</span><br><span class="accent">Manikandan</span></h1>
-      <h2>Aspiring</h2>
-      <h2 class="role-line">
-        <span id="typedRole"></span><span class="cursor">|</span>
-      </h2>
-      <p class="hero-desc">
-        Computer Science Engineering graduate focused on Full Stack Development, 
-        .NET, Java, backend engineering, and AI-integrated applications, 
-        with an interest in building practical, secure, and scalable software solutions.
-      </p>
-      <div class="hero-cta">
-        <a href="#" class="btn btn-primary" id="downloadResume">Download Resume</a>
-        <a href="#contact" class="btn btn-outline">Hire Me</a>
-      </div>
-      <div class="socials">
-        <a href="https://www.linkedin.com/in/manikandan-ar-038843264/"
-             target="_blank"
-             rel="noopener noreferrer"
-             aria-label="LinkedIn"
-             class="social-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.15 1.45-2.15 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.[...]
-        </a>
-
-        <a href="https://github.com/manikandanar3646"
-             target="_blank"
-             rel="noopener noreferrer"
-             aria-label="GitHub"
-             class="social-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.88-2.78.62-3.37[...]
-        </a>
-
-        <a href="mailto:manikandanmnm5656@gmail.com"
-             aria-label="Email"
-             class="social-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M2 6.5A2.5 2.5 0 014.5 4h15A2.5 2.5 0 0122 6.5v11a2.5 2.5 0 01-2.5 2.5h-15A2.5 2.5 0 012 17.5v-11zm2.2-.4l7.3[...]
-        </a>
-
-        <a href="https://leetcode.com/u/mani-kandan/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="LeetCode"
-          class="social-icon">
-          <i class="devicon-leetcode-plain"></i>
-        </a>
-      </div>
-    </div>
-
-    <div class="hero-photo-wrap">
-      <div class="hero-photo-ring">
-        <div class="hero-photo">
-          <img src="manikandan.jpg" alt="AR Manikandan">
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="scroll-cue" aria-hidden="true"><span></span></div>
-</section>
-
-<!-- ===== ABOUT ME ===== -->
-<section class="about" id="about">
-  <div class="about-text">
-    <h2 class="section-title section-title--left">About Me</h2>
-    <p>
-      I'm a Computer Science Engineering graduate and an aspiring Full Stack Developer 
-      passionate about building modern, scalable, and practical software applications. 
-      My technical interests span C#, .NET, Java, React, SQL, backend development, and AI integration.
-    </p>
-    <p>
-      I enjoy developing complete applications—from responsive user interfaces
-      and REST APIs to database-driven backend systems. I also explore AI technologies
-      such as LLMs and NLP to integrate intelligent capabilities into software projects and solve real-world problems.
-    </p>
-    <p>
-      I'm continuously learning, improving my development skills, and looking for opportunities
-      to work in collaborative environments where I can contribute, gain practical experience, 
-      and grow as a software developer.
-    </p>
-  </div>
-
-  <div class="about-photo">
-    <img src="img.jpg" alt="AR Manikandan">
-  </div>
-</section>
-
-<!-- ===== WHAT I'M DOING ===== -->
-<section class="doing" id="focus">
-  <h2 class="section-title">What I'm Doing</h2>
-  <div class="doing-grid">
-    <div class="doing-card">
-      <div class="doing-icon">💻</div>
-      <h3>Full Stack Development</h3>
-      <p>Building responsive and scalable web applications using .NET, React, Spring Boot and SQL Server.</p>
-    </div>
-    <div class="doing-card doing-card--mid">
-      <div class="doing-icon">🖥️</div>
-      <h3>Backend &amp; API Engineering</h3>
-      <p>Designing robust backend systems and REST APIs with C#, Java, .NET and Spring Boot for real-world products.</p>
-    </div>
-    <div class="doing-card">
-      <div class="doing-icon">🤖</div>
-      <h3>AI-Integrated Projects</h3>
-      <p>Integrating LLMs, NLP and AI capabilities into full-stack applications to build intelligent and practical solutions for real-world problems.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ===== SKILLS ===== -->
-<section class="skills" id="skills">
-  <h2 class="section-title">Technical Skills</h2>
-  <div class="skills-grid" id="skillsGrid">
-    <!-- populated by JS -->
-  </div>
-</section>
-
-<!-- ===== EXPERIENCE ===== -->
-<section class="experience" id="experience">
-
-    <h2 class="section-title">Experience</h2>
-
-    <div class="experience-container">
-
-        <!-- Experience 1 -->
-        <div class="experience-card">
-
-            <div class="experience-logo">
-                <img src="intern.png" alt="Akhilsoft">
-            </div>
-
-            <div class="experience-content">
-
-                <h3>Full Stack Development Intern</h3>
-
-                <h4>Akhilsoft Solutions • 2025</h4>
-
-                <p>
-                    Contributed to a healthcare management application, working on multiple functional modules as part of the development team.
-                </p>
-
-                <p>
-                    Developed and integrated frontend interfaces, backend APIs, and database operations using C#, ASP.NET Core, and SQL Server.
-                </p>
-                <p>
-                    Implemented CRUD operations, form handling, data validation, and API integration for assigned application features.
-                </p>
-                <p>
-                    Worked with SQL Server to manage application data and connect database operations with backend services.
-                </p>
-
-                <p>
-                    Collaborated with developers to understand requirements, troubleshoot issues, test features, and improve application functionality.
-                </p>
-                <p>
-                    Gained practical experience in full-stack development, REST APIs, backend architecture, database integration, and Agile development practices.
-                </p>
-           </div>
-         </div>
-     </div>
-</section>
-
 <!-- ===================== PROJECTS ===================== -->
 
 <section class="projects" id="projects">
@@ -224,8 +6,8 @@
 
     <div class="projects-container">
 
-        <!-- Previous Button -->
-        <button class="project-btn prev-btn">
+        <!-- Previous -->
+        <button class="project-btn prev-btn" type="button" aria-label="Previous projects">
             &#10094;
         </button>
 
@@ -234,690 +16,221 @@
 
             <div class="projects-track" id="projectsTrack">
 
-                <!-- =============================
-                     ONLY PROJECT CARDS GO HERE
-                     DO NOT CREATE PAGES
-                ============================== -->
+                <!-- =========================
+                     PAGE 1
+                     6 PROJECTS
+                ========================== -->
 
-                <!-- Project 1 -->
-                <article class="project-card">
+                <div class="projects-page">
 
-                    <div class="project-thumb">
-                        <img src="ai novel.png" alt="AI Novel Generation">
-                    </div>
+                    <!-- 1 -->
+                    <article class="project-card">
+                        <div class="project-thumb">
+                            <img src="ai novel.png" alt="AI Novel Generation">
+                        </div>
 
-                    <div class="project-body">
-                        <h3>AI Novel Generation System</h3>
-                        <p>XAML • Open Api • LiteDB • Llama 3.2 • C# • .NET • WPF</p>
-                    </div>
+                        <div class="project-body">
+                            <h3>AI Novel Generation System</h3>
+                            <p>XAML • OpenAI • LiteDB • Llama 3.2 • C# • .NET WPF</p>
+                        </div>
 
-                    <div class="project-github">
-                        <a href="https://github.com/manikandanar3646/NovelWriter.ai"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="github-btn">
-                           <i class="devicon-github-original"></i>
-                           <span>GitHub</span>
-                        </a>
-                    </div>
+                        <div class="project-github">
+                            <a href="https://github.com/manikandanar3646/NovelWriter.ai"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="github-btn">
+                                <i class="devicon-github-original"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </article>
 
-                </article>
+                    <!-- 2 -->
+                    <article class="project-card">
+                        <div class="project-thumb">
+                            <img src="hotel.png" alt="Hotel Management">
+                        </div>
 
-                <!-- Project 2 -->
-                <article class="project-card">
+                        <div class="project-body">
+                            <h3>Hotel Management System</h3>
+                            <p>C# • .NET • SQL Server • CRUD • HTML • CSS • JavaScript</p>
+                        </div>
 
-                    <div class="project-thumb">
-                        <img src="hotel.png" alt="Hotel Management">
-                    </div>
+                        <div class="project-github">
+                            <a href="https://github.com/manikandanar3646/Hotel-manage-system"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="github-btn">
+                                <i class="devicon-github-original"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </article>
 
-                    <div class="project-body">
-                        <h3>Hotel Management System</h3>
-                        <p>C# • .NET • SQL Server • CRUD • HTML • CSS • JavaScript</p>
-                    </div>
+                    <!-- 3 -->
+                    <article class="project-card">
+                        <div class="project-thumb">
+                            <img src="miniSocial.png" alt="Mini Social Media">
+                        </div>
 
-                    <div class="project-github">
-                        <a href="https://github.com/manikandanar3646/Hotel-manage-system"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="github-btn">
-                           <i class="devicon-github-original"></i>
-                           <span>GitHub</span>
-                        </a>
-                    </div>
+                        <div class="project-body">
+                            <h3>Mini Social Media App</h3>
+                            <p>C# • .NET • JavaScript • HTML • CSS • SQL Server • JWT</p>
+                        </div>
 
-                </article>
+                        <div class="project-github">
+                            <a href="https://github.com/manikandanar3646/MiniSocialMediaWeb"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="github-btn">
+                                <i class="devicon-github-original"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </article>
 
-                <!-- Project 3 -->
-                <article class="project-card">
+                    <!-- 4 -->
+                    <article class="project-card">
+                        <div class="project-thumb">
+                            <img src="wedding.png" alt="Wedding Hall Management">
+                        </div>
 
-                    <div class="project-thumb">
-                        <img src="miniSocial.png" alt="Mini Social Media">
-                    </div>
+                        <div class="project-body">
+                            <h3>Wedding Hall Management</h3>
+                            <p>WPF • C# • .NET • SQL Server</p>
+                        </div>
 
-                    <div class="project-body">
-                        <h3>Mini Social Media App</h3>
-                        <p>C# • .NET • JavaScript • HTML • CSS • SQL Server • JWT</p>
-                    </div>
+                        <div class="project-github">
+                            <a href="https://github.com/manikandanar3646/weddingHallBooking"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="github-btn">
+                                <i class="devicon-github-original"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </article>
 
-                    <div class="project-github">
-                        <a href="https://github.com/manikandanar3646/MiniSocialMediaWeb"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="github-btn">
-                           <i class="devicon-github-original"></i>
-                           <span>GitHub</span>
-                        </a>
-                    </div>
+                    <!-- 5 -->
+                    <article class="project-card">
+                        <div class="project-thumb">
+                            <img src="Ecommerce.png" alt="E-Commerce Website">
+                        </div>
 
-                </article>
+                        <div class="project-body">
+                            <h3>E-Commerce Website</h3>
+                            <p>ReactJS • SpringBoot • Java • HTML • CSS • SQL</p>
+                        </div>
 
-                <!-- Project 4 -->
-                <article class="project-card">
+                        <div class="project-github">
+                            <a href="https://github.com/manikandanar3646/E-Commerce-Website"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="github-btn">
+                                <i class="devicon-github-original"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </article>
 
-                    <div class="project-thumb">
-                        <img src="wedding.png" alt="Wedding Hall">
-                    </div>
+                    <!-- 6 -->
+                    <article class="project-card">
+                        <div class="project-thumb">
+                            <img src="todotask.png" alt="To Do Application">
+                        </div>
 
-                    <div class="project-body">
-                        <h3>Wedding Hall Management</h3>
-                        <p>WPF • C# • .NET • SQL Server</p>
-                    </div>
+                        <div class="project-body">
+                            <h3>To Do Application</h3>
+                            <p>.NET MAUI • SQLite • XAML</p>
+                        </div>
 
-                    <div class="project-github">
-                        <a href="https://github.com/manikandanar3646/weddingHallBooking"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="github-btn">
-                           <i class="devicon-github-original"></i>
-                           <span>GitHub</span>
-                        </a>
-                    </div>
+                        <div class="project-github">
+                            <a href="https://github.com/manikandanar3646/ToDoListApp"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="github-btn">
+                                <i class="devicon-github-original"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </article>
 
-                </article>
+                </div>
 
-                <!-- Project 5 -->
-                <article class="project-card">
+                <!-- =========================
+                     PAGE 2
+                     REMAINING PROJECTS
+                ========================== -->
 
-                    <div class="project-thumb">
-                        <img src="Ecommerce.png" alt="E-Commerce">
-                    </div>
+                <div class="projects-page">
 
-                    <div class="project-body">
-                        <h3>E-Commerce Website</h3>
-                        <p>ReactJS • SpringBoot • java • HTML • CSS • JavaScript • H2 database</p>
-                    </div>
+                    <!-- 7 -->
+                    <article class="project-card">
+                        <div class="project-thumb">
+                            <img src="quoteOfDay.png" alt="Quote of the Day">
+                        </div>
 
-                    <div class="project-github">
-                        <a href="https://github.com/manikandanar3646/E-Commerce-Website"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="github-btn">
-                           <i class="devicon-github-original"></i>
-                           <span>GitHub</span>
-                        </a>
-                    </div>
+                        <div class="project-body">
+                            <h3>Quote of the Day Application</h3>
+                            <p>.NET MAUI • SQLite • XAML</p>
+                        </div>
 
-                </article>
+                        <div class="project-github">
+                            <a href="https://github.com/manikandanar3646/QuoteOfTheDay"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="github-btn">
+                                <i class="devicon-github-original"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </article>
 
-                <!-- Project 6 -->
-                <article class="project-card">
+                    <!-- 8 -->
+                    <article class="project-card">
+                        <div class="project-thumb">
+                            <img src="photoshare.png" alt="Photo Share Platform">
+                        </div>
 
-                    <div class="project-thumb">
-                        <img src="todotask.png" alt="To Do">
-                    </div>
+                        <div class="project-body">
+                            <h3>Photo Share Platform</h3>
+                            <p>React.js • Tailwind CSS • Axios • Vite • C# • ASP.NET Core</p>
+                        </div>
 
-                    <div class="project-body">
-                        <h3>To Do Application</h3>
-                        <p>.NET MAUI • SQLite • XAML</p>
-                    </div>
+                        <div class="project-github">
+                            <a href="https://github.com/manikandanar3646/Photo-Share-Platform"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="github-btn">
+                                <i class="devicon-github-original"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </article>
 
-                    <div class="project-github">
-                        <a href="https://github.com/manikandanar3646/ToDoListApp"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="github-btn">
-                           <i class="devicon-github-original"></i>
-                           <span>GitHub</span>
-                        </a>
-                    </div>
+                    <!-- Empty slots -->
+                    <div class="project-placeholder"></div>
+                    <div class="project-placeholder"></div>
+                    <div class="project-placeholder"></div>
+                    <div class="project-placeholder"></div>
 
-                </article>
+                </div>
 
-                <!-- Project 7 -->
-                <article class="project-card">
+            </div>
 
-                    <div class="project-thumb">
-                        <img src="quoteOfDay.png" alt="To Do">
-                    </div>
+        </div>
 
-                    <div class="project-body">
-                        <h3>quote of the day Application</h3>
-                        <p>.NET MAUI • SQLite • XAML</p>
-                    </div>
+        <!-- Next -->
+        <button class="project-btn next-btn" type="button" aria-label="Next projects">
+            &#10095;
+        </button>
 
-                    <div class="project-github">
-                        <a href="https://github.com/manikandanar3646/QuoteOfTheDay"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="github-btn">
-                           <i class="devicon-github-original"></i>
-                           <span>GitHub</span>
-                        </a>
-                    </div>
+    </div>
 
-                </article>
-
-                <!-- Project 8 -->
-                <article class="project-card">
-
-                    <div class="project-thumb">
-                        <img src="photoshare.png" alt="PhotoShare Platform">
-                    </div>
-
-                    <div class="project-body">
-                        <h3>Photo Share Platform</h3>
-                        <p>React.js • Tailwind CSS • Axios • Vite • C# • ASP.NET Core Web API • JWT • PostgreSQL • Supabase Storage • Vercel • Render</p>
-                    </div>
-
-                    <div class="project-github">
-                        <a href="https://github.com/manikandanar3646/Photo-Share-Platform"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           class="github-btn">
-                           <i class="devicon-github-original"></i>
-                           <span>GitHub</span>
-                        </a>
-                    </div>
-
-                </article>
-
-              </div>
-
-          </div>
-
-          <!-- Next Button -->
-          <button class="project-btn next-btn">
-              &#10095;
-          </button>
-
-      </div>
-
-      <!-- Dots -->
-      <div class="project-dots" id="projectDots"></div>
+    <!-- Page dots -->
+    <div class="project-dots">
+        <button class="project-dot active" type="button" aria-label="Project page 1"></button>
+        <button class="project-dot" type="button" aria-label="Project page 2"></button>
+    </div>
 
 </section>
-
-<!-- ===== VALUE ===== -->
-<section class="value-section" id="value">
-
-  <div class="value-container">
-
-    <span class="section-label">Value</span>
-
-    <h2 class="value-title">
-      What I Can Do <span>For You</span>
-    </h2>
-
-    <p class="value-description">
-      I can build practical and scalable software solutions by combining full-stack development, backend engineering, databases, and AI technologies.
-    </p>
-
-    <div class="value-grid">
-
-      <!-- Value 1 -->
-      <div class="value-card">
-
-        <div class="value-icon">
-          <i class="fas fa-layer-group"></i>
-        </div>
-
-        <div class="value-content">
-          <h3>Build Full-Stack Applications</h3>
-
-          <p>
-            I can develop complete applications, from responsive user interfaces to backend APIs, databases, and application logic.
-          </p>
-        </div>
-
-      </div>
-
-
-      <!-- Value 2 -->
-      <div class="value-card">
-
-        <div class="value-icon">
-          <i class="fas fa-server"></i>
-        </div>
-
-        <div class="value-content">
-          <h3>Develop .NET &amp; Java Backend Solutions</h3>
-
-          <p>
-           I can build backend solutions using C#, .NET, ASP.NET Core, Java, Spring Boot, and REST APIs.
-          </p>
-        </div>
-
-      </div>
-
-
-      <!-- Value 3 -->
-      <div class="value-card">
-
-        <div class="value-icon">
-          <i class="fas fa-brain"></i>
-        </div>
-
-        <div class="value-content">
-          <h3>Integrate AI Into Applications</h3>
-
-          <p>
-           I can integrate AI capabilities into applications using NLP, LLMs, and AI model technologies to build intelligent solutions.
-          </p>
-        </div>
-
-      </div>
-
-
-      <!-- Value 4 -->
-      <div class="value-card">
-
-        <div class="value-icon">
-          <i class="fas fa-database"></i>
-        </div>
-
-        <div class="value-content">
-          <h3>Design Database-Driven Systems</h3>
-
-          <p>
-            I can design and develop data-driven applications using SQL Server, CRUD operations, authentication, and structured data management.
-          </p>
-        </div>
-
-      </div>
-
-      <!-- Value 5 -->
-      <div class="value-card">
-
-        <div class="value-icon">
-          <i class="fas fa-layer-group"></i>
-        </div>
-
-        <div class="value-content">
-          <h3>Continuous Learning</h3>
-
-          <p>
-            I continuously expand my technical capabilities across .NET, Java, React, SQL, NLP, and LLM technologies, while being willing to learn and adapt to new technologies.
-          </p>
-        </div>
-
-      </div>
-
-      <!-- Value 6 -->
-      <div class="value-card">
-
-        <div class="value-icon">
-          <i class="fas fa-layer-group"></i>
-        </div>
-
-        <div class="value-content">
-          <h3>End-to-End Development</h3>
-
-          <p>
-            I can work across frontend, backend, APIs, databases, and application logic to contribute to complete software solutions.
-          </p>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
-
-</section>
-
-<!-- ===== KEY ACHIEVEMENTS ===== -->
-<section class="achievements" id="achievements">
-
-  <div class="achievements-container">
-
-    <span class="section-label">Achievements</span>
-
-    <h2 class="achievements-title">
-      Key <span>Achievements</span>
-    </h2>
-
-    <div class="achievements-grid">
-
-      <!-- Achievement 1 -->
-      <div class="achievement-card">
-
-        <div class="achievement-icon">
-          <i class="fas fa-code"></i>
-        </div>
-
-        <div class="achievement-content">
-          <h3>Developing an AI Career Product</h3>
-
-          <p>
-            Designed the concept and architecture for ARTHENA AI, an AI-powered career and recruitment assistant focused on helping users discover, navigate, and explore job opportunities.
-          </p>
-        </div>
-
-      </div>
-
-
-      <!-- Achievement 2 -->
-      <div class="achievement-card">
-
-        <div class="achievement-icon">
-          <i class="fas fa-robot"></i>
-        </div>
-
-        <div class="achievement-content">
-          <h3>Developed AI-Powered Applications</h3>
-
-          <p>
-            Built AI and NLP-based applications using Llama, DistilBERT, C#, XAML, LiteDB, and related technologies.
-          </p>
-        </div>
-
-      </div>
-
-
-      <!-- Achievement 3 -->
-      <div class="achievement-card">
-
-        <div class="achievement-icon">
-          <i class="fas fa-laptop-code"></i>
-        </div>
-
-        <div class="achievement-content">
-          <h3>Multi-Stack Development</h3>
-
-          <p>
-            Gained hands-on experience with C#/.NET, Java/Spring Boot,
-            React, JavaScript, HTML, CSS, and SQL Server.
-          </p>
-        </div>
-
-      </div>
-
-      <!-- Achievement 4 -->
-      <div class="achievement-card">
-
-        <div class="achievement-icon">
-          <i class="fas fa-briefcase"></i>
-        </div>
-
-        <div class="achievement-content">
-          <h3>Gained Practical Development Experience</h3>
-
-          <p>
-            Applied development skills through internships and projects
-            involving frontend, backend, APIs, databases, authentication,
-            and application integration.
-          </p>
-        </div>
-
-      </div>
-
-      <!-- Achievement 5 -->
-      <div class="achievement-card">
-
-        <div class="achievement-icon">
-          <i class="fas fa-laptop-code"></i>
-        </div>
-
-        <div class="achievement-content">
-          <h3>Full-Stack Project Development</h3>
-
-          <p>
-            Built multiple end-to-end applications across frontend, backend, databases, APIs, and AI technologies, including e-commerce, hotel management, complaint analysis, and AI-powered appli[...]
-          </p>
-        </div>
-
-      </div>
-
-      <div class="achievement-card">
-
-        <div class="achievement-icon">
-          <i class="fas fa-laptop-code"></i>
-        </div>
-
-        <div class="achievement-content">
-          <h3>College Event Planning & Coordination</h3>
-
-          <p>
-            Planned and coordinated a department-level coding event at college, taking responsibility for organizing and managing the event while working with others to ensure its successful exec[...]
-          </p>
-        </div>
-
-      </div>
-
-     </div>
-
-      
-
-   </div>
-
-</section>
-
-<!-- ===== CERTIFICATES ===== -->
-<section class="certificates" id="certificates">
-
-  <h2 class="section-title">Certificates</h2>
-
-  <div class="cert-grid">
-
-    <!-- C# Certificate -->
-    <div class="cert-card"
-         onclick="openCertificate('csharp.jpg')">
-
-      <div class="cert-image-wrapper">
-        <img
-          src="csharp.jpg"
-          alt="C# Certification"
-          class="cert-image">
-      </div>
-
-      <div class="cert-info">
-        <h3>C# Immersive</h3>
-        <p>Udemy • 2024</p>
-      </div>
-
-    </div>
-
-    <!-- JavaScript Certificate -->
-    <div class="cert-card"
-         onclick="openCertificate('js and css.jpg')">
-
-      <div class="cert-image-wrapper">
-        <img
-          src="js and css.jpg"
-          alt="JavaScript & css Certification"
-          class="cert-image">
-      </div>
-
-      <div class="cert-info">
-        <h3>JavaScript & CSS Certification</h3>
-        <p>Udemy • 2026</p>
-      </div>
-
-    </div>
-
-
-    <!-- SL sql Certificate -->
-    <div class="cert-card"
-         onclick="openCertificate('sql.jpg')">
-
-      <div class="cert-image-wrapper">
-        <img
-          src="sql.jpg"
-          alt="SQL Certification"
-          class="cert-image">
-      </div>
-
-      <div class="cert-info">
-        <h3>introduction to SQL</h3>
-        <p>Simple Learn • 2026</p>
-      </div>
-
-    </div>
-
-
-    <!-- SQL Certificate -->
-    <div class="cert-card"
-         onclick="openCertificate('Udemy sql.jpg')">
-
-      <div class="cert-image-wrapper">
-        <img
-          src="Udemy sql.jpg"
-          alt="SQL Certification Certificate"
-          class="cert-image">
-      </div>
-
-      <div class="cert-info">
-        <h3>Complete introduction to SQL programming</h3>
-        <p>Udemy • 2026</p>
-      </div>
-
-    </div>
-
-
-    <!-- Java Certificate -->
-    <div class="cert-card"
-         onclick="openCertificate('java.jpg')">
-
-      <div class="cert-image-wrapper">
-        <img
-          src="java.jpg"
-          alt="Java Certification Certificate"
-          class="cert-image">
-      </div>
-
-      <div class="cert-info">
-        <h3>Java Programming & Basics of Spring Boot Certification</h3>
-        <p>Udemy • 2026</p>
-      </div>
-
-    </div>
-
-    <!-- python Certificate -->
-    <div class="cert-card"
-         onclick="openCertificate('databases.jpg')">
-
-      <div class="cert-image-wrapper">
-        <img
-          src="databases.jpg"
-          alt="Python Certification"
-          class="cert-image">
-      </div>
-
-      <div class="cert-info">
-        <h3>Databases with Python</h3>
-        <p>Udemy • 2023</p>
-      </div>
-
-    </div>
-
-        <!-- HTML Certificate -->
-    <div class="cert-card"
-         onclick="openCertificate('html.jpg')">
-
-      <div class="cert-image-wrapper">
-        <img
-          src="html.jpg"
-          alt="HTML Certification"
-          class="cert-image">
-      </div>
-
-      <div class="cert-info">
-        <h3>Introduction to HTML</h3>
-        <p>Simple Learn • 2026</p>
-      </div>
-    </div>
-    
-    <!-- IEEE Certificate -->
-    <div class="cert-card"
-         onclick="openCertificate('IEEE.jpg')">
-
-      <div class="cert-image-wrapper">
-        <img
-          src="IEEE.jpg"
-          alt="IEEE Certification"
-          class="cert-image">
-      </div>
-
-      <div class="cert-info">
-        <h3>IEEE Conference Certification</h3>
-        <p>IEEE • 2026</p>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- Certificate Modal -->
-<div class="certificate-modal"
-     id="certificateModal"
-     aria-hidden="true">
-
-  <button
-    class="certificate-close"
-    type="button"
-    aria-label="Close certificate">
-    &times;
-  </button>
-
-  <div class="certificate-modal-content">
-    <img
-      id="certificateModalImage"
-      src=""
-      alt="Certificate preview">
-  </div>
-
-</div>
-
-
-
-<!-- ===== CONTACT ===== -->
-<section class="contact" id="contact">
-  <h2 class="section-title">Contact Me</h2>
-
-  <form class="contact-form" id="contactForm">
-    <input
-      type="text"
-      name="from_name"
-      placeholder="Your Name"
-      required>
-
-    <input
-      type="email"
-      name="reply_to"
-      placeholder="Email"
-      required>
-
-    <textarea
-      name="message"
-      placeholder="Message"
-      required></textarea>
-
-    <button
-      type="submit"
-      class="btn btn-primary btn-block">
-      Send Message
-    </button>
-  </form>
-
-  <p class="form-note" id="formNote"></p>
-</section>
-
-<footer class="footer">
-  <p>&copy; <span id="year"></span> AR Manikandan. All rights reserved.</p>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script src="script.js"></script>
-</body>
-</html>
