@@ -12,7 +12,7 @@ const themeIcon = document.getElementById('themeIcon');
 function applyTheme(theme){
   root.setAttribute('data-theme', theme);
   themeIcon.innerHTML = theme === 'light'
-    ? '<circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/><path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>'
+    ? '<circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/><path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" stroke="cu[...]
     : '<path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>';
   localStorage.setItem('portfolio-theme', theme);
 }
@@ -166,10 +166,10 @@ document.getElementById('downloadResume').addEventListener('click', (e) => {
 
 
 
-/* ---------- Projects 6-Item Horizontal Carousel ---------- */
+/* ---------- Projects 3-Column Grid Carousel ---------- */
 
 /* ==========================================================
-                    PROJECT SLIDER
+                     PROJECT SLIDER
 ========================================================== */
 
 (function () {
@@ -185,7 +185,7 @@ document.getElementById('downloadResume').addEventListener('click', (e) => {
     // Clear track
     track.innerHTML = "";
 
-    const PER_PAGE = 6;
+    const PER_PAGE = 6; // 3 columns × 2 rows
 
     const pages = [];
 
