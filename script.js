@@ -1,7 +1,3 @@
-// ===============================
-// AR Manikandan — Portfolio JS
-// ===============================
-
 document.getElementById('year').textContent = new Date().getFullYear();
 
 /* ---------- Theme toggle ---------- */
