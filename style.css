@@ -3600,3 +3600,247 @@ html[data-theme="light"] .hero .blob {
     scroll-behavior: auto !important;
   }
 }
+
+/* =========================================================
+   MIDNIGHT BLUE + ELECTRIC VIOLET THEME
+   Original layout and component styling are preserved.
+========================================================= */
+:root {
+  --bg: #080B18;
+  --bg-alt: #0D1226;
+  --surface: #111831;
+  --surface-2: #172142;
+  --border: rgba(164, 157, 255, 0.16);
+  --text: #F1F3FF;
+  --text-dim: #A8B0CC;
+  --accent: #6D8DFF;
+  --accent-2: #A78BFA;
+  --accent-soft: rgba(109, 141, 255, 0.14);
+  --blue: #4F8CFF;
+  --shadow-glow: 0 0 40px rgba(109, 141, 255, 0.16);
+}
+
+/* Keep the existing light-theme toggle functional. */
+html[data-theme="light"] {
+  --bg: #F5F6FF;
+  --bg-alt: #ECEEFF;
+  --surface: #FFFFFF;
+  --surface-2: #F0F1FF;
+  --border: rgba(74, 65, 160, 0.14);
+  --text: #17172D;
+  --text-dim: #5F6280;
+  --accent: #526DFF;
+  --accent-2: #8057E8;
+  --accent-soft: rgba(82, 109, 255, 0.10);
+  --shadow-glow: 0 0 36px rgba(109, 95, 255, 0.10);
+}
+
+html,
+body {
+  background-color: var(--bg);
+}
+
+body {
+  background-image:
+    radial-gradient(ellipse at 12% 8%, rgba(50, 79, 174, 0.20), transparent 38%),
+    radial-gradient(ellipse at 88% 24%, rgba(112, 65, 190, 0.17), transparent 34%),
+    radial-gradient(ellipse at 52% 72%, rgba(42, 62, 135, 0.10), transparent 42%),
+    linear-gradient(145deg, #080B18 0%, #0B1022 48%, #100C24 100%);
+  background-attachment: fixed;
+}
+
+html[data-theme="light"] body {
+  background-image:
+    radial-gradient(ellipse at 12% 8%, rgba(91, 119, 255, 0.10), transparent 38%),
+    radial-gradient(ellipse at 88% 24%, rgba(155, 105, 245, 0.09), transparent 34%),
+    linear-gradient(145deg, #F8F9FF 0%, #F0F1FF 55%, #F7F0FF 100%);
+}
+
+/* =========================================================
+   HERO: RESTORE ORIGINAL BALLS AS 3D BLUE/VIOLET ORBS
+   Keep the original ball elements and their existing float motion.
+========================================================= */
+.hero {
+  position: relative;
+  isolation: isolate;
+  background: transparent;
+  overflow: hidden;
+}
+
+.hero-blobs {
+  display: block !important;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  perspective: 900px;
+}
+
+.hero .blob {
+  display: block !important;
+  border-radius: 50%;
+  opacity: .88;
+  filter: none;
+  transform-style: preserve-3d;
+  border: 1px solid rgba(255,255,255,.26);
+  box-shadow:
+    inset -18px -22px 38px rgba(3, 6, 24, .58),
+    inset 9px 10px 18px rgba(255,255,255,.20),
+    0 18px 38px rgba(3, 6, 24, .28),
+    0 0 32px rgba(109, 141, 255, .20);
+  overflow: hidden;
+}
+
+/* Glossy specular highlight on every orb. */
+.hero .blob::before {
+  content: "";
+  position: absolute;
+  width: 42%;
+  height: 27%;
+  top: 12%;
+  left: 14%;
+  border-radius: 50%;
+  transform: rotate(-32deg);
+  background: linear-gradient(180deg, rgba(255,255,255,.72), rgba(255,255,255,.04));
+  filter: blur(2px);
+  opacity: .82;
+}
+
+.hero .blob::after {
+  content: "";
+  position: absolute;
+  inset: 8%;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: inset 0 0 24px rgba(255,255,255,.05);
+}
+
+/* Custom six-colour palette with glossy 3D shading. */
+.hero .blob-red {
+  background: radial-gradient(circle at 29% 22%,
+    #E9E4FF 0%, #B8ACEB 13%, #8B7CC7 38%, #6C5AA8 70%, #40315F 100%);
+}
+.hero .blob-red-sm {
+  background: radial-gradient(circle at 29% 22%,
+    #E5D9FF 0%, #9A7BD0 13%, #5A3B8C 38%, #432766 70%, #26163D 100%);
+}
+.hero .blob-orange,
+.hero .blob-orange-lg {
+  background: radial-gradient(circle at 29% 22%,
+    #FFE4B8 0%, #F5B65A 13%, #D97706 38%, #A65308 70%, #5F2D08 100%);
+}
+.hero .blob-yellow-sm {
+  background: radial-gradient(circle at 29% 22%,
+    #FFE4F2 0%, #F58BC3 13%, #EC4899 38%, #B72D73 70%, #681842 100%);
+}
+.hero .blob-yellow {
+  background: radial-gradient(circle at 29% 22%,
+    #F7DDF3 0%, #C66BB2 13%, #7A2E6F 38%, #58204F 70%, #30112B 100%);
+}
+.hero .blob-blue-lg,
+.hero .blob-blue-md {
+  background: radial-gradient(circle at 29% 22%,
+    #FFF1C9 0%, #FFD46B 13%, #F4A624 38%, #C47D12 70%, #70430A 100%);
+}
+
+/* Keep foreground content, portrait and social links above the decorative balls. */
+.hero > :not(.hero-blobs):not(.dragon-layer) {
+  position: relative;
+  z-index: 2;
+}
+
+.hero .socials,
+.hero .social-icon,
+.socials,
+.social-icon {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.socials {
+  position: relative;
+  z-index: 5;
+  flex-wrap: wrap;
+}
+
+.social-icon {
+  color: var(--text) !important;
+  background: rgba(23, 33, 66, .92) !important;
+  border: 1px solid rgba(167, 139, 250, .45) !important;
+  box-shadow: 0 4px 18px rgba(55, 66, 150, .18);
+}
+
+.social-icon:hover {
+  color: #fff !important;
+  background: linear-gradient(135deg, #4F8CFF, #9B6DFF) !important;
+  border-color: rgba(255,255,255,.42) !important;
+}
+
+/* Hide any previously added dragon markup without affecting the hero or its balls. */
+.dragon-layer,
+#dragonLayer,
+.dragon-art,
+.dragon-aura,
+.dragon-trail {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* Sections stay transparent so the gradient flows smoothly across the page. */
+section:not(.hero) {
+  background-color: transparent;
+}
+
+:where(.project-card, .skill-card, .certificate-card, .achievement-card, .experience-card) {
+  border-color: var(--border);
+}
+
+html[data-theme="light"] body {
+  background-attachment: scroll;
+}
+
+html[data-theme="light"] .hero .blob {
+  opacity: .68;
+  box-shadow:
+    inset -18px -22px 38px rgba(28, 30, 90, .24),
+    inset 9px 10px 18px rgba(255,255,255,.46),
+    0 18px 38px rgba(49, 57, 110, .16),
+    0 0 30px rgba(109, 141, 255, .16);
+}
+
+@media (max-width: 768px) {
+  .hero .blob { opacity: .56; }
+  .hero .blob-blue-lg { width: 170px; height: 170px; }
+  .hero .blob-blue-md { width: 110px; height: 110px; }
+  .hero .blob-red { width: 130px; height: 130px; }
+  .hero .blob-orange-lg { width: 150px; height: 150px; }
+}
+
+
+/* =========================================================
+   FLAT 2D DECORATIVE BALLS — USER-REQUESTED PALETTE
+   Removes 3D shading, glossy highlights, and orb shadows.
+========================================================= */
+.hero .blob {
+  border: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+  opacity: 1 !important;
+  transform-style: flat !important;
+  overflow: visible !important;
+}
+.hero .blob::before,
+.hero .blob::after {
+  content: none !important;
+  display: none !important;
+}
+.hero .blob-red { background: #8B7CC7 !important; }
+.hero .blob-red-sm { background: #5A3B8C !important; }
+.hero .blob-orange,
+.hero .blob-orange-lg { background: #D97706 !important; }
+.hero .blob-yellow-sm { background: #EC4899 !important; }
+.hero .blob-yellow { background: #7A2E6F !important; }
+.hero .blob-blue-lg,
+.hero .blob-blue-md { background: #F4A624 !important; }
