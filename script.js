@@ -148,12 +148,13 @@ contactForm.addEventListener("submit", function (e) {
 });
 
 /* ---------- Download Resume placeholder ---------- */
-document.getElementById('downloadResume').addEventListener('click', (e) => {
+dodocument.getElementById('downloadResume').addEventListener('click', function (e) {
     e.preventDefault();
 
     const link = document.createElement('a');
-    link.href = 
-    link.download = 'Manikandan AR.pdf';
+    link.href = './MANIKANDAN.AR_.pdf';
+    link.download = 'Manikandan_AR.pdf';
+
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
