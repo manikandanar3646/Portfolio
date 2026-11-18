@@ -147,18 +147,6 @@ contactForm.addEventListener("submit", function (e) {
 
 });
 
-/* ---------- Download Resume placeholder ---------- */
-dodocument.getElementById('downloadResume').addEventListener('click', function (e) {
-    e.preventDefault();
-
-    const link = document.createElement('a');
-    link.href = './MANIKANDAN.AR_.pdf';
-    link.download = 'Manikandan_AR.pdf';
-
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-});
 
 
 
